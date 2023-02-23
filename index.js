@@ -128,7 +128,7 @@ const encoding_length = (value) => {
 
 const encode_vector = vector => vector.flatMap(int => encode(int))
 
-const parse = (vector, offset) => {
+const parse = (vector, offset=0) => {
   const int = read(vector, offset)
   return [ int, offset + read.bytes ]
 }
